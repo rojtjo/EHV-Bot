@@ -5,7 +5,12 @@
  * @package default
  * @author Roj Vroemen <rojtjo@gmail.com>
  **/
+
 require_once(INC_PATH . 'base.php');
+
+/**
+ * Class arduino
+ */
 class Arduino extends Base {
   /**
    *

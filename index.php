@@ -2,6 +2,7 @@
 
 error_reporting(E_ALL);
 session_start();
+
 /* Require constants */
 require_once('constants.php');
 
