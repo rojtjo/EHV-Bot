@@ -6,6 +6,25 @@ session_start();
 /* Require constants */
 require_once('constants.php');
 
+if(isset($_GET['tweets'])){
+	/**
+	 * @param tweets
+	 * Retrieve tweets, show in database
+	 * return back to main page
+	 * Poll every 24 seconds.
+	 */
+	require_once(INC_PATH . 'tweets.php');
+	$twitter = new tweets();
+	$tweets = $twitter->tweet_fetcher();
+	$twitter->tweet_saver($tweets);
+	
+	foreach($tweets as $key => $value){
+		$tweets = $value->text;
+		$twitter->tweet_saver($tweets);
+	}
+	header('location: index.php');
+}
+
 if( ! empty($_GET)) $url_segment = explode('/', $_GET['url']);
 else $url_segment[0] = 'home';
 

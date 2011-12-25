@@ -1,9 +1,8 @@
 <?php
 
-session_start();
 function get_mentions(){
-	require_once('twitteroauth/twitteroauth.php');
-	require_once('config.php');
+	require_once('./twitter/twitteroauth/twitteroauth.php');
+	require_once('./twitter/config.php');
 
 	/* Request access tokens from twitter */
 	$access_token = array('oauth_token' => '437334727-1qcDl3G5Ydfhw91vgecaAbIErJ8AHXXjI3ChTpeY' , 'oauth_token_secret' => 'KO9XzYJkBJFCN4Sjr9zvUomjXPi85PhtlFl1KgSsgVw');
@@ -28,5 +27,3 @@ function get_mentions(){
 }
 
 $content = get_mentions();
-
-include('html.inc');
