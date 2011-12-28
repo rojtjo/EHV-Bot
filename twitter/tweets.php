@@ -25,5 +25,3 @@ function get_mentions(){
 	return $content;
 	
 }
-
-$content = get_mentions();

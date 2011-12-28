@@ -11,7 +11,8 @@ if(isset($_GET['tweets'])){
 	 * @param tweets
 	 * Retrieve tweets, show in database
 	 * return back to main page
-	 * Poll every 24 seconds.
+	 * Poll every 24 seconds. if max request === 150
+	 * poll every 8 seconds. if max request === 350
 	 */
 	require_once(INC_PATH . 'tweets.php');
 	$twitter = new tweets();
