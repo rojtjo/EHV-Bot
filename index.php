@@ -6,8 +6,8 @@
  * @version 0.1
  * @param url_segments
  * @copyright copyright © 2011, Kevin Newesil, Roj Vroemen.
- * @name $tweets
  * @global array $tweets[0]
+ * @name $tweets
  */
 error_reporting(E_ALL);
 session_start();
