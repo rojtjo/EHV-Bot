@@ -24,14 +24,16 @@
    * Get data from database
    */
   public function from_db(){
-  	/**
-	 * The mysql query
-	 * @param $result_array
-	 */
+  	
+	
 	$rand = rand(0, 5);
   	$query = "SELECT `id`,`tweets` FROM `tweets` ORDER BY `id` DESC LIMIT 0,5";
 	
 	$sql = mysql_query($query);
+	
+	/**
+	 * The mysql array
+	 */
 	$result_array = array();
 	while($value = mysql_fetch_array($sql)){
 		$result_array[] = $value['tweets'];
@@ -42,6 +44,9 @@
  
  $obj = new open();
  $do = $obj->from_db();
- 
+ /**
+  * @param do 
+  * $do represents de text that is going to be displayed on the screen.
+  */
  echo $do;
 ?>
