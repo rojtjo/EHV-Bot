@@ -49,4 +49,5 @@
   * $do represents de text that is going to be displayed on the screen.
   */
  echo $do;
+ require('Refresh.html');
 ?>
